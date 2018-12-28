@@ -30,3 +30,24 @@
     transform: rotate(360deg);
   }
 }
+
+/* 
+* HEADER STYLING
+*/
+
+.header {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+* BODY STYLING
+*/
+
+.about, .contact {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
