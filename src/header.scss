@@ -1,0 +1,62 @@
+$text-muted: #868e96;
+$orange: rgba(255, 155, 0, 0.8);
+$border-orange: 1px solid $orange;
+$header-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: $header-shadow;
+
+  & .logo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &__text {
+      padding: 0.2rem 0;
+    }
+
+    & .-title {
+      font-size: 1.2rem;
+    }
+
+    & .-subtext {
+      font-size: 0.9rem;
+      color: $text-muted;
+    }
+  }
+
+  & .links {
+    padding: 0;
+
+    & .link {
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      color: $text-muted;
+      cursor: pointer;
+
+      &:hover {
+        color: inherit;
+        border-bottom: 1px solid black;
+
+        // Prevent border on hover for last child
+        &:last-child {
+          border-bottom: $border-orange;
+        }
+      }
+    }
+
+    & .-contact {
+      border: $border-orange;
+      border-radius: 5px;
+      transition: 0.3s;
+
+      &:hover {
+        background: $orange;
+      }
+    }
+  }
+}
