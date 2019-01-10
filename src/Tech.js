@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Header";
+import TechItem from "./TechItem";
 import "./tech.scss";
 
 class Tech extends Component {
@@ -13,7 +14,7 @@ class Tech extends Component {
       <React.Fragment>
         <Header goToUrl={this.goToUrl} />
         <div className="body tech">
-          <p>TECH</p>
+          <TechItem />
         </div>
       </React.Fragment>
     );

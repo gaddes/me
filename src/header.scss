@@ -2,6 +2,7 @@ $text-muted: #868e96;
 $orange: rgba(255, 155, 0, 0.8);
 $border-orange: 1px solid $orange;
 $header-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+$background: #f8f9fa;
 
 .header {
   display: flex;
@@ -9,6 +10,7 @@ $header-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   align-items: center;
   padding: 1rem 3rem;
   box-shadow: $header-shadow;
+  background-color: $background;
 
   & .logo {
     display: flex;
