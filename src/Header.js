@@ -13,24 +13,27 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <a className="logo" onClick={() => this.props.goToUrl("home")}>
+        <span className="logo" onClick={() => this.props.goToUrl("home")}>
           <span className="logo__text -title">Matt Gaddes</span>
           <span className="logo__text -subtext">Front-end Developer</span>
-        </a>
+        </span>
         <div className="links">
           {/* <button onClick={this.goToUrl('home')}>Home</button> */}
-          <a className="link" onClick={() => this.props.goToUrl("home")}>
-            Home
-          </a>
-          <a className="link" onClick={() => this.props.goToUrl("about")}>
-            About
-          </a>
-          <a
+          <button
+            className="link"
+            onClick={() => this.props.goToUrl("projects")}
+          >
+            Projects
+          </button>
+          <button className="link" onClick={() => this.props.goToUrl("tech")}>
+            Tech
+          </button>
+          <button
             className="link -contact"
             onClick={() => this.props.goToUrl("contact")}
           >
             Contact
-          </a>
+          </button>
         </div>
       </div>
     );
