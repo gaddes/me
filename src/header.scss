@@ -1,8 +1,4 @@
-$text-muted: #868e96;
-$orange: rgba(255, 155, 0, 0.8);
-$border-orange: 1px solid $orange;
-$header-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
-$background: #f8f9fa;
+@import 'variables';
 
 .header {
   display: flex;
@@ -10,7 +6,9 @@ $background: #f8f9fa;
   align-items: center;
   padding: 1rem 3rem;
   box-shadow: $header-shadow;
-  background-color: $background;
+  background-color: $header-background;
+  height: $header-height;
+  z-index: 1000;
 
   & .logo {
     display: flex;
@@ -30,7 +28,7 @@ $background: #f8f9fa;
 
     & .-subtext {
       font-size: 0.9rem;
-      color: $text-muted;
+      color: $header-text-muted;
     }
   }
 
@@ -40,7 +38,7 @@ $background: #f8f9fa;
     & .link {
       margin: 0 0.5rem;
       padding: 0.5rem;
-      color: $text-muted;
+      color: $header-text-muted;
       cursor: pointer;
       // Override default button attributes
       background-color: inherit;
@@ -55,18 +53,18 @@ $background: #f8f9fa;
 
         // Prevent border on hover for last child
         &:last-child {
-          border-bottom: $border-orange;
+          border-bottom: $header-button-border;
         }
       }
     }
 
     & .-contact {
-      border: $border-orange;
+      border: $header-button-border;
       border-radius: 5px;
       transition: 0.3s;
 
       &:hover {
-        background: $orange;
+        background: $header-orange;
       }
     }
   }
