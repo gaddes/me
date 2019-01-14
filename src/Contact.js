@@ -3,11 +3,6 @@ import Header from './Header';
 import './contact.scss';
 
 class Contact extends Component {
-  // goToUrl = url => {
-  //   // Change the page to the URL associated with the button
-  //   this.props.history.push(`/${url}`);
-  // };
-
   render() {
     return (
       <React.Fragment>
