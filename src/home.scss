@@ -34,7 +34,66 @@
         clip-path: circle(50%);
         height: 200px;
         width: 200px;
-        margin: 1rem;
+        margin: 2rem;
+        transition: $image-hover-transition;
+
+        &:hover {
+          transform: $image-hover-transform;
+        }
+      }
+    }
+
+    .contact-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      filter: $image-shadow;
+
+      .icon {
+        font-size: 2rem;
+        cursor: pointer;
+        margin: 0 1rem;
+        transition: $image-hover-transition;
+        // Override default link styles
+        color: inherit;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+    }
+
+    .button-wrapper {
+      filter: $image-shadow;
+      margin: 2rem 0.5rem;
+      background-color: $header-orange;
+      border: 1px solid $header-orange;
+      border-radius: 5px;
+      transition: $image-hover-transition;
+
+      &:hover {
+        // TODO: make this colour a variable in '_variables.scss'
+        background-color: rgba(255, 155, 0, 1);
+        transform: $image-hover-transform;
+      }
+
+      &:active {
+        transform: scale(0.9);
+      }
+
+      // TODO: rewrite this styling in variables (or as a button component) so it can be shared between 'home' and 'header'
+      .link {
+        padding: 1rem;
+        // For some reason vertical padding has no effect on this link so line-height has been used instead
+        line-height: 2.5rem;
+        // Override default link attributes
+        color: inherit;
+        text-decoration: none;
       }
     }
   }

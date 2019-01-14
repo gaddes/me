@@ -20,6 +20,11 @@
       height: 200px;
       width: 200px;
       margin: 1rem;
+      transition: $image-hover-transition;
+
+      &:hover {
+        transform: $image-hover-transform;
+      }
     }
   }
 

@@ -38,13 +38,8 @@
     & .link {
       margin: 0 0.5rem;
       padding: 0.5rem;
-      color: $header-text-muted;
-      cursor: pointer;
-      // Override default button attributes
-      background-color: inherit;
-      border: none;
-      font-size: 1rem;
       // Override default link attributes
+      color: $header-text-muted;
       text-decoration: none;
 
       &:hover {
