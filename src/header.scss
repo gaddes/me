@@ -16,6 +16,9 @@ $background: #f8f9fa;
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    // Override default link attributes
+    text-decoration: none;
+    color: inherit;
 
     &__text {
       padding: 0.2rem 0;
@@ -43,6 +46,8 @@ $background: #f8f9fa;
       background-color: inherit;
       border: none;
       font-size: 1rem;
+      // Override default link attributes
+      text-decoration: none;
 
       &:hover {
         color: inherit;
