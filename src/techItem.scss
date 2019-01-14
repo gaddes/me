@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin: 1rem;
+
+  // TODO: revise these
+  max-width: 568px;
+  border: 1px solid grey;
+  border-radius: 8px;
 
   .logo-container {
     filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.2));
@@ -10,7 +17,7 @@
       clip-path: circle(50%);
       width: 200px;
       height: 200px;
-      // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+      margin: 1rem;
     }
   }
 
@@ -19,6 +26,6 @@
   }
 
   .description {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 }

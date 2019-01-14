@@ -1,36 +1,72 @@
-import React, { Component } from "react";
-import "./techItem.scss";
+import React, { Component } from 'react';
+import './techItem.scss';
 
-// Image imports - require() required for webpack
-const react_logo = require("./images/logo_react.png");
-const sass_logo = require("./images/logo_SASS.png");
+// array of objects
+const techArray = [
+  {
+    alt: 'react logo',
+    logo: require('./images/logo_react.png'),
+    title: 'React',
+    description: `I'm learning to use React alongside JavaScript to assist with the quick and easy creation of interactive UIs.`
+  },
+  {
+    alt: 'sass logo',
+    logo: require('./images/logo_sass.png'),
+    title: 'Sass',
+    description: `I use CSS and SASS wherever possible to bring my designs to life!`
+  },
+  {
+    alt: 'html logo',
+    logo: require('./images/logo_html.png'),
+    title: 'HTML5',
+    description: `The stalwart of web development; what more can I say!`
+  },
+  {
+    alt: 'css logo',
+    logo: require('./images/logo_css.png'),
+    title: 'CSS3',
+    description: `I use CSS and SASS wherever possible to bring my designs to life!`
+  },
+  {
+    alt: 'bootstrap logo',
+    logo: require('./images/logo_bootstrap.png'),
+    title: 'Bootstrap',
+    description: `Bootstrap is a fantastic framework for quickly creating new projects whilst ensuring a clean and consistent layout. Easily modified with CSS to ensure each project is handcrafted and unique!`
+  },
+  {
+    alt: 'javascript logo',
+    logo: require('./images/logo_js.png'),
+    title: 'JavaScript',
+    description: `JavaScript is used on all my projects to add interactivity and functionality - with JavaScript, anything is possible!`
+  },
+  {
+    alt: 'terminal logo',
+    logo: require('./images/logo_terminal.png'),
+    title: 'Bash/NPM/Webpack',
+    description: `I use Bash to install and run packages via NPM, and scripts to automate repetitive tasks. This ensures my workflow is efficient and productive, giving me maximum time to design layouts and write code to support new features.`
+  },
+  {
+    alt: 'git logo',
+    logo: require('./images/logo_github.png'),
+    title: 'Git, GitHub & SVN',
+    description: `I use Git or SVN on all projects for version control and sharing code.`
+  }
+];
 
-const logoArray = [react_logo, sass_logo];
-
-const array = logoArray.map(function(name) {
-  return <p>{name}</p>;
+const techObjects = techArray.map(function(item) {
+  return (
+    <div className='item'>
+      <div className='logo-container'>
+        <img className='logo' src={item.logo} alt={item.alt} />
+      </div>
+      <span className='heading'>{item.title}</span>
+      <span className='description'>{item.description}</span>
+    </div>
+  );
 });
-// var Hello = React.createClass({
-//   render: function() {
-//     var names = ["Jake", "Jon", "Thruster"];
-//     var namesList = names.map(function(name) {
-//       return <li>{name}</li>;
-//     });
-//     return <ul>{namesList}</ul>;
-//   }
-// });
 
 export default class TechItem extends Component {
   render() {
-    return (
-      <div className="item">
-        <div className="logo-container">
-          <img className="logo" src={react_logo} alt="react logo" />
-        </div>
-        <span className="heading">TITLE</span>
-        <span className="description">description here</span>
-        <div>{array}</div>
-      </div>
-    );
+    return <div className='items'>{techObjects}</div>;
   }
 }
