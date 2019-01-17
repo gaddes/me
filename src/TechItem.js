@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './techItem.scss';
 
-// array of objects
+// Array of Tech
 const techArray = [
   {
     alt: 'react logo',

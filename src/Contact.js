@@ -8,7 +8,14 @@ class Contact extends Component {
       <React.Fragment>
         <Header />
         <div className='body contact'>
-          <p>CONTACT</p>
+          <div className='overlay-light'>
+            <p>Send me an email by clicking the link below</p>
+            <div className='button-wrapper'>
+              <a href='mailto:matthew.gaddes@gmail.com' className='link'>
+                Send email!
+              </a>
+            </div>
+          </div>
         </div>
       </React.Fragment>
     );

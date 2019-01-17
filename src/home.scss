@@ -3,7 +3,7 @@
 
 .home {
   height: calc(100vh - #{$header-height});
-  background: 50% 0 no-repeat url('./images/background.jpg');
+  background: 50% 0 no-repeat url('./images/background_home.jpg');
   background-size: cover;
 
   .overlay-light {
@@ -21,10 +21,6 @@
     .title {
       font-size: 3rem;
       margin: 1rem;
-    }
-
-    .subtext {
-      //
     }
 
     .myface-wrapper {
@@ -68,6 +64,7 @@
       }
     }
 
+    // TODO: make this a variable so it can be shared between 'home', 'contact' and possibly 'header'
     .button-wrapper {
       filter: $image-shadow;
       margin: 2rem 0.5rem;
@@ -86,7 +83,7 @@
         transform: scale(0.9);
       }
 
-      // TODO: rewrite this styling in variables (or as a button component) so it can be shared between 'home' and 'header'
+      // TODO: rewrite this styling in variables (or as a button component) so it can be shared between 'home', 'header' and 'contact'
       .link {
         padding: 1rem;
         // For some reason vertical padding has no effect on this link so line-height has been used instead

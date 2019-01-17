@@ -1,0 +1,38 @@
+@import 'variables';
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1rem;
+
+  // TODO: revise these
+  max-width: 568px;
+  // border: 1px solid grey;
+  // border-radius: 8px;
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .image-container {
+    filter: $image-shadow;
+
+    .image {
+      width: 512px;
+      border-radius: 24px;
+      margin: 1rem;
+      transition: $image-hover-transition;
+
+      &:hover {
+        transform: $image-hover-transform;
+      }
+    }
+  }
+
+  .bullets {
+    text-align: left;
+    font-size: 1.2rem;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Project from './Project';
 import './projects.scss';
 
 export default class Projects extends Component {
@@ -8,7 +9,7 @@ export default class Projects extends Component {
       <React.Fragment>
         <Header />
         <div className='body projects'>
-          <p>PROJECTS</p>
+          <Project />
         </div>
       </React.Fragment>
     );
