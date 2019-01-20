@@ -16,17 +16,39 @@
     font-size: 3rem;
   }
 
-  .image-container {
-    filter: $image-shadow;
+  .media-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    .image {
-      width: 512px;
+    .video {
+      width: 360px;
       border-radius: 24px;
       margin: 1rem;
       transition: $image-hover-transition;
 
       &:hover {
-        transform: $image-hover-transform;
+        transform: $project-hover-transform;
+      }
+    }
+
+    .image-container {
+      filter: $image-shadow;
+
+      .image {
+        max-width: 512px;
+        border-radius: 24px;
+        margin: 1rem;
+        transition: $image-hover-transition;
+
+        &:hover {
+          transform: $project-hover-transform;
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none;
       }
     }
   }
