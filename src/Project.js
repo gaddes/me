@@ -4,6 +4,7 @@ import './project.scss';
 // Array of Projects
 const projectArray = [
   {
+    id: 1,
     title: 'Pasta Bake (TM)',
     alt: 'Pasta Bake (TM)',
     url: 'https://gaddes.github.io/PastaBake/',
@@ -15,6 +16,7 @@ const projectArray = [
     ]
   },
   {
+    id: 2,
     title: 'Meldon Xmas',
     alt: 'Meldon Xmas',
     url: 'https://meldon-xmas.herokuapp.com/',
@@ -26,6 +28,7 @@ const projectArray = [
     ]
   },
   {
+    id: 3,
     title: 'Matchless Design',
     alt: 'Matchless Design',
     url: 'http://matchlessdesign.co.uk/',
@@ -37,9 +40,10 @@ const projectArray = [
     ]
   },
   {
+    id: 4,
     title: 'Coffee Companion',
     alt: 'Coffee Companion',
-    url: '',
+    // url: '',
     image: require('./images/projects/coffee-companion.png'),
     video: require('./images/projects/coffee-companion.mp4'),
     bullets: [
@@ -50,12 +54,16 @@ const projectArray = [
   }
 ];
 
-// TODO: loop through bullets and populate <ul> on line 45
-const bulletPoints = projectArray.map(function(item) {
-  return <li>some text</li>;
-});
-
 const projectObjects = projectArray.map(function(item) {
+
+  // Create title element
+  let title;
+  if (item.title) {
+    title = (
+      <span className='title'>{item.title}</span>
+    );
+  }
+
   // Only show video if it exists
   let videoPath;
   if (item.video) {
@@ -79,30 +87,35 @@ const projectObjects = projectArray.map(function(item) {
     );
   } else {
     imagePath = (
-      <span
-        className='image-container'
-        href={item.url}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
+      <span className='image-container'>
         <img className='image' src={item.image} alt={item.alt} />
       </span>
     );
   }
 
+  // Show all bullet points (if they exist)
+  let bulletPoints;
+  // Check item has bullets
+  if (item.bullets) {
+    // Loop through bullets, add each one to array as a <li> item
+    const bulletsArray = item.bullets.map((bullet, index) =>
+      <li key={`bullet-${index + 1}`}>{bullet}</li>
+    );
+    bulletPoints = (
+      <ul className='bullets'>
+        {bulletsArray}
+      </ul>
+    );
+  }
+
   return (
-    <div className='project'>
-      <span className='title'>{item.title}</span>
+    <div className='project' key={`project-${item.id}`}>
+      {title}
       <div className='media-container'>
         {imagePath}
         {videoPath}
       </div>
-      <ul className='bullets'>
-        {/* <li>{...item.bullets}</li> */}
-        <li>{item.bullets[0]}</li>
-        <li>{item.bullets[1]}</li>
-        <li>{item.bullets[2]}</li>
-      </ul>
+      {bulletPoints}
     </div>
   );
 });
