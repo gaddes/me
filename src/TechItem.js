@@ -42,7 +42,7 @@ const techArray = [
   {
     alt: 'terminal logo',
     logo: require('./images/logo_terminal.png'),
-    title: 'Bash/NPM/Webpack',
+    title: 'Bash / NPM / Webpack',
     description: `I use Bash to install and run packages via NPM, and scripts to automate repetitive tasks. This ensures my workflow is efficient and productive, giving me maximum time to design layouts and write code to support new features.`
   },
   {

@@ -46,7 +46,6 @@ const projectArray = [
     id: 4,
     title: 'Coffee Companion',
     alt: 'Coffee Companion',
-    // url: '',
     image: require('./images/projects/coffee-companion.png'),
     video: require('./images/projects/coffee-companion.mp4'),
     portrait: true,
@@ -145,12 +144,16 @@ const projectObjects = projectArray.map(function(item) {
 
   return (
     <div className='project' key={`project-${item.id}`}>
-      {title}
-      <div className='media-container'>
-        {imagePath}
-        {videoPath}
+      <div className='project__hero'>
+        {title}
+        <div className='media-container'>
+          {imagePath}
+          {videoPath}
+        </div>
       </div>
-      {bulletPoints}
+      <div className='project__description'>
+        {bulletPoints}
+      </div>
     </div>
   );
 });

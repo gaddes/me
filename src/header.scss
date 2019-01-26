@@ -2,7 +2,7 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
   box-shadow: $header-shadow;
@@ -12,7 +12,6 @@
 
   @media only screen and (min-width: $breakpoint-medium) {
     padding: 1rem 3rem;
-    justify-content: space-between;
   }
 
   & .logo {
