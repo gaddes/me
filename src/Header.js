@@ -16,7 +16,7 @@ class Header extends Component {
       <div className='header'>
         <Link className='logo' to='/home'>
           <span className='logo__text -title'>Matt Gaddes</span>
-          <span className='logo__text -subtext'>Front-end Developer</span>
+          <span className='logo__text -subtext'>Software Engineer</span>
         </Link>
         <div className='links'>
           <Link to='/projects' className='link'>

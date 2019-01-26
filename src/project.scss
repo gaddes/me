@@ -1,5 +1,10 @@
 @import 'variables';
 
+// .projects {
+//   width: 80%;
+//   display: block;
+// }
+
 .project {
   display: flex;
   flex-direction: column;
@@ -7,13 +12,17 @@
   text-align: center;
   margin: 1rem;
 
-  // TODO: revise these
-  max-width: 568px;
-  // border: 1px solid grey;
-  // border-radius: 8px;
+  // TODO: fix this
+  // width: 368px;
+  // max-width: $breakpoint-medium;
+  width: 80%;
 
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+      font-size: 3rem;
+    }
   }
 
   .media-container {
@@ -21,34 +30,32 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
-    .video {
-      width: 360px;
-      border-radius: 24px;
-      margin: 1rem;
-      transition: $image-hover-transition;
-
-      &:hover {
-        transform: $project-hover-transform;
-      }
-    }
-
-    .image-container {
+    .image-container, .video-container {
       filter: $image-shadow;
+      width: 100%;
 
-      .image {
-        max-width: 512px;
+      .image, .video {
         border-radius: 24px;
         margin: 1rem;
         transition: $image-hover-transition;
+        width: 90%;
 
         &:hover {
           transform: $project-hover-transform;
         }
       }
+    }
 
-      @media only screen and (max-width: 768px) {
+    .image-container {
+      &.-portrait {
+        // Hide image on small screens (show video only)
         display: none;
+
+        @media only screen and (min-width: $breakpoint-medium) {
+          display: block;
+        }
       }
     }
   }

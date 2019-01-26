@@ -9,6 +9,7 @@ const projectArray = [
     alt: 'Pasta Bake (TM)',
     url: 'https://gaddes.github.io/PastaBake/',
     image: require('./images/projects/pasta-bake.png'),
+    portrait: false,
     bullets: [
       'this website is great because...',
       'it also includes this technology...',
@@ -21,6 +22,7 @@ const projectArray = [
     alt: 'Meldon Xmas',
     url: 'https://meldon-xmas.herokuapp.com/',
     image: require('./images/projects/meldon-xmas.png'),
+    portrait: false,
     bullets: [
       'this website is great because...',
       'it also includes this technology...',
@@ -33,6 +35,7 @@ const projectArray = [
     alt: 'Matchless Design',
     url: 'http://matchlessdesign.co.uk/',
     image: require('./images/projects/matchless-design.png'),
+    portrait: false,
     bullets: [
       'this website is great because...',
       'it also includes this technology...',
@@ -46,6 +49,7 @@ const projectArray = [
     // url: '',
     image: require('./images/projects/coffee-companion.png'),
     video: require('./images/projects/coffee-companion.mp4'),
+    portrait: true,
     bullets: [
       'this website is great because...',
       'it also includes this technology...',
@@ -67,30 +71,61 @@ const projectObjects = projectArray.map(function(item) {
   // Only show video if it exists
   let videoPath;
   if (item.video) {
-    videoPath = (
-      <video className='video' loop src={item.video} autoPlay muted />
-    );
+    if (item.portrait === true) {
+      videoPath = (
+        <div className='video-container -portrait'>
+          <video className='video' loop src={item.video} autoPlay muted />
+        </div>
+      );
+    } else {
+      videoPath = (
+        <div className='video-container'>
+          <video className='video' loop src={item.video} autoPlay muted />
+        </div>
+      );
+    }
   }
 
   // Show <a> if there's an href, otherwise show <span>
   let imagePath;
   if (item.url) {
-    imagePath = (
-      <a
-        className='image-container'
-        href={item.url}
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <img className='image' src={item.image} alt={item.alt} />
-      </a>
-    );
+    if (item.portrait === true) {
+      imagePath = (
+        <a
+          className='image-container -portrait'
+          href={item.url}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <img className='image' src={item.image} alt={item.alt} />
+        </a>
+      );
+    } else {
+      imagePath = (
+        <a
+          className='image-container'
+          href={item.url}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <img className='image' src={item.image} alt={item.alt} />
+        </a>
+      );
+    }
   } else {
-    imagePath = (
-      <span className='image-container'>
-        <img className='image' src={item.image} alt={item.alt} />
-      </span>
-    );
+    if (item.portrait === true) {
+      imagePath = (
+        <div className='image-container -portrait'>
+          <img className='image' src={item.image} alt={item.alt} />
+        </div>
+      );
+    } else {
+      imagePath = (
+        <div className='image-container'>
+          <img className='image' src={item.image} alt={item.alt} />
+        </div>
+      );
+    }
   }
 
   // Show all bullet points (if they exist)

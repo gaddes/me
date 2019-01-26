@@ -27,8 +27,13 @@
     }
 
     & .-subtext {
+      display: none;
       font-size: 0.9rem;
       color: $header-text-muted;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        display: block;
+      }
     }
   }
 

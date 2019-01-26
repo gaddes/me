@@ -10,7 +10,7 @@ class Home extends Component {
       <div className='body home'>
         <div className='overlay-light'>
           <p className='title'>Hi, I'm Matt!</p>
-          <p>A Web Developer based in Newcastle-upon-Tyne</p>
+          <p className='subtitle'>A software engineer based in Newcastle-upon-Tyne</p>
           <div className='myface-wrapper'>
             <img src={myFace} className='myface' alt="Matt's face" />
           </div>
