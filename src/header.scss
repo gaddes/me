@@ -2,13 +2,18 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem;
   box-shadow: $header-shadow;
   background-color: $header-background;
   height: $header-height;
   z-index: 1000;
+
+  @media only screen and (min-width: $breakpoint-medium) {
+    padding: 1rem 3rem;
+    justify-content: space-between;
+  }
 
   & .logo {
     display: flex;
@@ -24,6 +29,23 @@
 
     & .-title {
       font-size: 1.2rem;
+      display: none;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        display: block;
+      }
+    }
+
+    & .-mobile {
+      display: block;
+      font-size: 1rem;
+      // Same margin & padding as header links
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+
+      @media only screen and (min-width: $breakpoint-medium) {
+        display: none;
+      }
     }
 
     & .-subtext {
