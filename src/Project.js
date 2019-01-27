@@ -5,56 +5,74 @@ import './project.scss';
 const projectArray = [
   {
     id: 1,
-    title: 'Pasta Bake (TM)',
-    alt: 'Pasta Bake (TM)',
-    url: 'https://gaddes.github.io/PastaBake/',
-    image: require('./images/projects/pasta-bake.png'),
+    title: `Pasta Bake (TM)`,
+    alt: `Pasta Bake (TM)`,
+    url: `https://gaddes.github.io/PastaBake/`,
+    image: require(`./images/projects/pasta-bake.png`),
     portrait: false,
     bullets: [
-      'this website is great because...',
-      'it also includes this technology...',
-      "here's a third bullet point just for the craic..."
+      `The official website for the number one independently-owned Pasta Bake appreciation page`,
+      `One of my first websites, this was built in plain HTML and CSS`,
+      `The header is fully responsive and its height reduces as the user scrolls down the page`
     ]
   },
   {
     id: 2,
-    title: 'Meldon Xmas',
-    alt: 'Meldon Xmas',
-    url: 'https://meldon-xmas.herokuapp.com/',
-    image: require('./images/projects/meldon-xmas.png'),
+    title: `Meldon Xmas`,
+    alt: `Meldon Xmas`,
+    url: `https://meldon-xmas.herokuapp.com/`,
+    image: require(`./images/projects/meldon-xmas.png`),
     portrait: false,
     bullets: [
-      'this website is great because...',
-      'it also includes this technology...',
-      "here's a third bullet point just for the craic..."
+      `A single-page application built on Node.js`,
+      `This app uses mongoose to define schemas for MongoDB`,
+      `We used this to add and remove items from our Christmas shopping list!`
     ]
   },
   {
     id: 3,
-    title: 'Matchless Design',
-    alt: 'Matchless Design',
-    url: 'http://matchlessdesign.co.uk/',
-    image: require('./images/projects/matchless-design.png'),
+    title: `Matchless Design`,
+    alt: `Matchless Design`,
+    url: `http://matchlessdesign.co.uk/`,
+    image: require(`./images/projects/matchless-design.png`),
     portrait: false,
     bullets: [
-      'this website is great because...',
-      'it also includes this technology...',
-      'Due to licensing issues, images in the gallery have been intentionally left blank'
+      `The client for this piece of work is an engineering consultant`,
+      `This website was used to showcase the client's broad range of capabilities within the mechanical engineering sector`,
+      `Still awaiting final copy and, due to licensing issues, images in the gallery have been intentionally left blank`
     ]
   },
   {
     id: 4,
-    title: 'Coffee Companion',
-    alt: 'Coffee Companion',
-    image: require('./images/projects/coffee-companion.png'),
-    video: require('./images/projects/coffee-companion.mp4'),
+    title: `Coffee Companion`,
+    alt: `Coffee Companion`,
+    image: require(`./images/projects/coffee-companion.png`),
+    video: require(`./images/projects/coffee-companion.mp4`),
     portrait: true,
     bullets: [
-      'this website is great because...',
-      'it also includes this technology...',
-      "here's a third bullet point just for the craic..."
+      `A companion app for the Nespresso range of coffee machines, written in Swift`,
+      `Track the number of coffee pods remaining, check 'on' or 'off' using the hamburger menu`,
+      `Built exclusively for iOS, with a responsive layout that adapts to any size device`
     ]
   }
+];
+
+// TODO: populate this array and then extract into a new component (Tutorials.js)
+// Array of tutorials
+const tutorialArray = [
+  {
+    id: 1,
+    title: `Matchless Design`,
+    alt: `Matchless Design`,
+    url: `http://matchlessdesign.co.uk/`,
+    image: require(`./images/projects/matchless-design.png`),
+    portrait: false,
+    bullets: [
+      `The client for this piece of work is an engineering consultant`,
+      `This website was used to showcase the client's broad range of capabilities within the mechanical engineering sector`,
+      `Still awaiting final copy and, due to licensing issues, images in the gallery have been intentionally left blank`
+    ]
+  },
 ];
 
 const projectObjects = projectArray.map(function(item) {

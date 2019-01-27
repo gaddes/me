@@ -89,6 +89,10 @@
     .bullets {
       text-align: left;
       font-size: 1.2rem;
+
+      li {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
