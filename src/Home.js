@@ -15,12 +15,19 @@ class Home extends Component {
             <img src={myFace} className='myface' alt="Matt's face" />
           </div>
           <div className='contact-icons'>
-            <a className='icon' href='https://github.com/gaddes'>
+            <a 
+              className='icon'
+              href='https://github.com/gaddes'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               <FontAwesomeIcon icon={['fab', 'github']} />
             </a>
             <a
               className='icon'
               href='https://www.linkedin.com/in/matthew-gaddes-30ba65b4/'
+              target='_blank'
+              rel='noopener noreferrer'
             >
               <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
             </a>
