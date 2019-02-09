@@ -20,6 +20,7 @@ class Home extends Component {
               href='https://github.com/gaddes'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='github'
             >
               <FontAwesomeIcon icon={['fab', 'github']} />
             </a>
@@ -28,10 +29,15 @@ class Home extends Component {
               href='https://www.linkedin.com/in/matthew-gaddes-30ba65b4/'
               target='_blank'
               rel='noopener noreferrer'
+              aria-label='linked in'
             >
               <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
             </a>
-            <a className='icon' href='mailto:matthew.gaddes@gmail.com'>
+            <a 
+              className='icon'
+              href='mailto:matthew.gaddes@gmail.com'
+              aria-label='email'
+            >
               <FontAwesomeIcon icon={['far', 'envelope']} />
             </a>
           </div>
