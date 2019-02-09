@@ -59,6 +59,7 @@ const projectArray = [
 
 // TODO: populate this array and then extract into a new component (Tutorials.js)
 // Array of tutorials
+// eslint-disable-next-line
 const tutorialArray = [
   {
     id: 1,
@@ -85,34 +86,16 @@ const projectObjects = projectArray.map(function(item) {
     );
   }
 
-  // Only show video if it exists
-  let videoPath;
-  if (item.video) {
-    if (item.portrait === true) {
-      videoPath = (
-        <div className='video-container -portrait'>
-          <video className='video' loop src={item.video} autoPlay muted />
-        </div>
-      );
-    } else {
-      videoPath = (
-        <div className='video-container'>
-          <video className='video' loop src={item.video} autoPlay muted />
-        </div>
-      );
-    }
-  }
-
   // Show <a> if there's an href, otherwise show <span>
   let imagePath;
   if (item.url) {
     if (item.portrait === true) {
       imagePath = (
         <a
-          className='image-container -portrait'
-          href={item.url}
-          target='_blank'
-          rel='noopener noreferrer'
+        className='image-container -portrait'
+        href={item.url}
+        target='_blank'
+        rel='noopener noreferrer'
         >
           <img className='image' src={item.image} alt={item.alt} />
         </a>
@@ -120,10 +103,10 @@ const projectObjects = projectArray.map(function(item) {
     } else {
       imagePath = (
         <a
-          className='image-container'
-          href={item.url}
-          target='_blank'
-          rel='noopener noreferrer'
+        className='image-container'
+        href={item.url}
+        target='_blank'
+        rel='noopener noreferrer'
         >
           <img className='image' src={item.image} alt={item.alt} />
         </a>
@@ -142,6 +125,30 @@ const projectObjects = projectArray.map(function(item) {
           <img className='image' src={item.image} alt={item.alt} />
         </div>
       );
+    }
+  }
+
+  // Only show video if it exists
+  let videoPath;
+  if (item.video) {
+    /*
+     * Only render video on page load if the screen width exceeds 768px
+     * Note: this corresponds to $breakpoint-medium defined in _variables.scss
+    */
+    if (window.innerWidth >= 768) {
+      if (item.portrait === true) {
+        videoPath = (
+          <div className='video-container -portrait'>
+            <video className='video' loop src={item.video} autoPlay muted controls />
+          </div>
+        );
+      } else {
+        videoPath = (
+          <div className='video-container'>
+            <video className='video' loop src={item.video} autoPlay muted controls />
+          </div>
+        );
+      }
     }
   }
 

@@ -62,7 +62,7 @@
 
       .video-container {
         &.-portrait {
-          // Hide image on small screens (show video only)
+          // Hide video on small screens (show image only)
           display: none;
 
           @media only screen and (min-width: $breakpoint-medium) {
