@@ -1,0 +1,8 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "ignoreTestFiles": "*.js",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/results"
+  }
+}
