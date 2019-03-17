@@ -44,6 +44,19 @@ const projectArray = [
   },
   {
     id: 4,
+    title: `YogaTimer`,
+    alt: `Yoga Timer`,
+    url: `https://www.yogatimer.co.uk/`,
+    image: require(`./images/projects/yoga-timer.png`),
+    portrait: false,
+    bullets: [
+      `This app allows the user to select a time range and number of loops`,
+      `It will play a gentle sound at the end of each loop`,
+      `Perfect for gym-goers or yoga enthusiasts!`
+    ]
+  },
+  {
+    id: 5,
     title: `Coffee Companion`,
     alt: `Coffee Companion`,
     image: require(`./images/projects/coffee-companion.png`),
