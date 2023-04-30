@@ -10,7 +10,7 @@
     "i": "^0.3.6",
     "netlify-cli": "^2.8.3",
     "node-sass": "^4.11.0",
-    "npm": "^6.5.0",
+    "npm": "^6.14.18",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
@@ -35,11 +35,11 @@
   ],
   "devDependencies": {
     "axe-core": "^3.1.2",
-    "cypress": "^3.1.5",
+    "cypress": "^12.11.0",
     "cypress-axe": "^0.3.0",
     "cypress-cucumber-preprocessor": "^1.10.0",
     "eslint-plugin-cypress": "^2.2.0",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "mochawesome": "^3.1.1"
   },
   "cypress-cucumber-preprocessor": {
