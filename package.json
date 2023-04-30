@@ -14,7 +14,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.2"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,7 +37,7 @@
     "axe-core": "^3.1.2",
     "cypress": "^3.1.5",
     "cypress-axe": "^0.3.0",
-    "cypress-cucumber-preprocessor": "^1.10.0",
+    "cypress-cucumber-preprocessor": "^1.19.2",
     "eslint-plugin-cypress": "^2.2.0",
     "mocha": "^5.2.0",
     "mochawesome": "^3.1.1"
